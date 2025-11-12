@@ -109,11 +109,11 @@
                 <br>
                 <div class="form-group">
 
-                    <button formaction="tarefa_atualizar.php"type="submit" class="btn btn-primary" name="btEditar">
+                    <button formaction="fornecedor_atualizar.php"type="submit" class="btn btn-primary" name="btEditar">
                         Editar
                     </button>
 
-                    <button formaction="tarefa_excluir.php" type="submit" class="btn btn-warning" name="btExcluir">
+                    <button formaction="fornecedor_excluir.php" type="submit" class="btn btn-warning" name="btExcluir">
                         Excluir
                     </button>
 

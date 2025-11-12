@@ -16,13 +16,13 @@
 
 
           <div class="item bg-gradient">
-            <a href="fornecedor_marcar.php">Cadastrar fornecedor</a>
+            <a href="fornecedor_marcar.php">Cadastrar Fornecedor</a>
           </div>
           <div class="item bg-gradient">
-            <a href="tarefa_listar.php">Listar tarefas</a>
+            <a href="fornecedor_listar.php">Listar Fornecedores</a>
           </div>
           <div class="item bg-gradient">
-            <a href="tarefa_pesquisar.php">Pesquisar tarefas</a>
+            <a href="fornecedor_pesquisar.php">Pesquisar Fornecedores</a>
           </div>
     
 
