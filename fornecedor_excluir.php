@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fornecedor :: Excluir</title>
+    <?php
+    include "referencias.php";
+    ?>
 </head>
 <body>
      <?php
      //incluir as referencias para o BD e o css
-     include "referencias.php";
+     
      //capturar do FROM que é o CNPJ a ser removido
      $cnpj=$_POST["txtCnpj"];
      //Construir a estrutura do comando DELETE

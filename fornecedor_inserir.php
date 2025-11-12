@@ -29,8 +29,9 @@
     $comando->bind_param("sssss", $nome_fantasia,$categoria, $endereco, $telefone,$email);
 
     //5º PASSO: Executar o comando 
-     if ($comando->execute()) {
-        echo "<h1 class='alert alert-success'>Novo fornecedor criado com sucesso!</h1>";
+     // Executa o statement
+    if ($comando->execute()) {
+        echo "<h1 class='alert alert-success'>Nova tarefa criado com sucesso!</h1>";
     } else {
         echo "<h1 class='alert alert-danger'>Erro ao inserir o registro:</h1> "; 
     }
@@ -38,6 +39,8 @@
     // Fecha o statement e a conexão
     $comando->close();
     $conexao->close();
+
+
     ?>
 </body>
 </html>

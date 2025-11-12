@@ -36,15 +36,14 @@
     $comando->bind_param("dsssss", $cnpj,$nome_fantasia, $categoria, $endereco, $telefone, $email);
 
     // Executa o statement
-    if ($comando->execute()) {
-        echo "<h1 class='alert alert-success'>Fornecedor atualizado com sucesso!</h1>";
-    } else {
-        echo "<h1 class='alert alert-danger'>Erro ao atualizar o Fornecedor:</h1> " ;
+    if ($comando->execute()) 
+    {
+        echo "<h1>Fornecedor inserido!</h1>"
     }
-
-    // Fecha o statement e a conexão
-    $comando->close();
-    $conexao->close();
+    else
+    {
+        echo "<h1>ERRO!</h1>"
+    } 
     ?>
 </body>
 

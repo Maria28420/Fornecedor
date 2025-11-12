@@ -17,7 +17,7 @@
             <div class="col-sm-12">
                 <h2>Fornecedor :: Marcar</h2>
                 <div class="form-group">
-                    <label>NOME</label>
+                    <label>NOME DA FANTASIA</label>
                     <input type="text" class="form-control" required="" placeholder="Descricao da Fantasia" name="txtNome_Fantasia">
                 </div>
 
@@ -25,7 +25,7 @@
 
                 <div class="form-group">
                     <label>CATEGORIA</label>
-                    <select name="txtCATEGORIA" class="form-control">
+                    <select name="txtCategoria" class="form-control">
                         <option value="Alta">Alta</option>
                         <option value="Média">Média</option>
                         <option value="Baixa">Baixa</option>
