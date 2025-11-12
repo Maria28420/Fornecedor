@@ -11,7 +11,6 @@
 <body>
     <?php
      //1º PASSO: Capturar os dados de entrada
-     $cnpj = $_POST["txtCnpj"];
      $nome_fantasia = $_POST["txtNome_Fantasia"];
      $categoria = $_POST["txtCategoria"];
      $endereco = $_POST["txtEndereco"];     
@@ -20,24 +19,25 @@
           
 
      //2º PASSO: Montar o comando SQL-insert
-    $sql= "INSERT INTO fornecedor(cnpj, nome_fantasia, categoria, endereco, telefone, email) VALUES(?,?,?,?,?,?)";
+    $sql= "INSERT INTO fornecedor (nome_fantasia, categoria, endereco, telefone, email) VALUES(?,?,?,?,?)";
 
     //3º PASSO: Preparar o comando SQL para ser executa
     //Ou seja,relacionar o comando SQL que será executado
     $comando=$conexao->prepare($sql);
 
     //4º PASSO: Vincular os ??? com as variáveis de entrada de dados
-    $comando->bind_param("ssssss",$cnpj,$nome_fantasia,$categoria, $endereco, $telefone,$email);
+    $comando->bind_param("sssss", $nome_fantasia,$categoria, $endereco, $telefone,$email);
 
     //5º PASSO: Executar o comando 
-    if ($comando->execute())
-    {
-        echo "<h1> Fornecedor agendamento</h1>";
+     if ($comando->execute()) {
+        echo "<h1 class='alert alert-success'>Novo fornecedor criado com sucesso!</h1>";
+    } else {
+        echo "<h1 class='alert alert-danger'>Erro ao inserir o registro:</h1> "; 
     }
-    else
-    {
-        echo "<h1>Erro!</h1>";
-    }
+
+    // Fecha o statement e a conexão
+    $comando->close();
+    $conexao->close();
     ?>
 </body>
 </html>

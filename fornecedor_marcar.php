@@ -17,14 +17,11 @@
             <div class="col-sm-12">
                 <h2>Fornecedor :: Marcar</h2>
                 <div class="form-group">
-                    <label>CNPJ</label>
-                    <input type="text" class="form-control" required="" placeholder="Descricao do CNPJ" name="txtCNPJ">
+                    <label>NOME</label>
+                    <input type="text" class="form-control" required="" placeholder="Descricao da Fantasia" name="txtNome_Fantasia">
                 </div>
 
-                <div class="form-group">
-                    <label>NOME_FANTASIA</label>
-                    <input type="text" class="form-control" required="" name="txtNOME_FANTASIA">
-                </div>
+               
 
                 <div class="form-group">
                     <label>CATEGORIA</label>

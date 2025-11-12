@@ -17,8 +17,8 @@
             <div class="col-sm-12">
                 <h2>Fornecedor :: Pesquisar</h2>
                 <div class="form-group">
-                    <label>Id</label>
-                    <input type="text" class="form-control" required="" placeholder="Id do Fornecedor" name="txtId">
+                    <label>Cnpj</label>
+                    <input type="text" class="form-control" required="" placeholder="Cnpj do Fornecedor" name="txtCnpj">
                 </div>
 
 

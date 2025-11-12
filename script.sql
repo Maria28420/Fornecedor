@@ -1,12 +1,13 @@
-CREATE DATABASE projeto;
+CREATE DATABASE estoque;
 
-USE projeto;
+USE estoque;
 
-CREATE TABLE tarefa
+CREATE TABLE fornecedor
 (
-id int primary key auto_increment,
-descricao varchar(200) not null,
-data_entrega date,
-prioridade varchar(50),
-responsavel varchar(100)
+cnpj numeric(14) primary key not null,
+nome_fantasia varchar(30) not null,
+categoria varchar(30),
+endereco varchar(30),
+telefone numeric(11),
+email varchar(25)
 )

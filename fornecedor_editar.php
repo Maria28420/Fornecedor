@@ -13,8 +13,7 @@
 <body>
     <?php
        //1º PASSO:Criar variáveis para armazenar os dados do comando SELECT
-       $id=$_POST["txtId"]; //o ID foi informado na página de PESQUISAR
-       $cnpj = "";
+       $cnpj=$_POST["txtCnpj"]; //o CNPJ foi informado na página de PESQUISAR
        $nome_fantasia = "";
        $categoria = "";
        $endereco = "";
@@ -22,13 +21,13 @@
        $email = "";
 
        //2º PASSO: Construir o comando SQL - select
-       $sql="SELECT * FROM Fornecedor where id = ?";
+       $sql="SELECT * FROM Fornecedor where cnpj = ?";
 
        //3º PASSO:Preparar o comando SQL  para ser executando na canexão
        $comando= $conexao->prepare($sql);
 
        //4º PASSO: Associar os valores dos parâmetros do comando sql
-       $comando->bind_param("i",$id);
+       $comando->bind_param("d",$cnpj);
 
        //5º PASSO: Executar o comando sql
        $comando->execute();
@@ -49,7 +48,6 @@
          $registro= $resultado->fetch_assoc();
 
          //Preenche as variáveis com o que o SELECT retornou
-         $cnpj=$registro["cnpj"];
          $nome_fantasia=$registro["nome_fantasia"];
          $categoria=$registro["categoria"];
          $endereco=$registro["endereco"];
@@ -66,18 +64,15 @@
             <div class="col-sm-12">
                 <h2>Fornecedor :: Editar</h2>
                 <div class="form-group">
-                    <label>Id</label>
-                    <input value="<?php echo $id ?>" type="text" class="form-control" required="" placeholder="Id da tarefa" name="txtId">
+                    <label>Cnpj</label>
+                    <input value="<?php echo $id ?>" type="text" class="form-control" required="" placeholder="Cnpj do Fornecedor" name="txtCnpj">
                 </div>
 
-                <div class="form-group">
-                    <label>Cnpj</label>
-                    <input value="<?php echo $cnpj ?>" type="text" class="form-control" required="" placeholder="Descricao da tarefa" name="txtCnpj">
-                </div>
+               
 
                 <div class="form-group">
                     <label>Nome_Fantasia</label>
-                    <input value="<?php echo $data_entrega ?>" type="text" class="form-control" required="" name="txtNome_Fantasia">
+                    <input value="<?php echo $nome_fantasia ?>" type="text" class="form-control" required="" name="txtNome_Fantasia">
                 </div>
 
                 <div class="form-group">

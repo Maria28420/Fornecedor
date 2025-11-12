@@ -9,14 +9,14 @@
      <?php
      //incluir as referencias para o BD e o css
      include "referencias.php";
-     //capturar do FROM que é o ID a ser removido
-     $id=$_POST["txtId"];
+     //capturar do FROM que é o CNPJ a ser removido
+     $cnpj=$_POST["txtCnpj"];
      //Construir a estrutura do comando DELETE
-     $sql="DELETE FROM fornecedor  WHERE id=?";
+     $sql="DELETE FROM fornecedor  WHERE cnpj=?";
      //Criar o objeto comando associado a conexão de dados
      $comando=$conexao->prepare($sql);
      //Associar comando parametro do comando SQL com as variáveis
-     $comando->bind_param("i",$id);
+     $comando->bind_param("d",$cnpj);
      //Executar comando no BD
      if($comando->execute())
      {

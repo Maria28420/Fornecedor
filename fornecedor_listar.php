@@ -25,7 +25,7 @@
                         <table>
 
                             <tr>
-                                <td>Cnpj</td>
+                              
                                 <td>Nome_Fantasia</td>
                                 <td>Categoria</td>
                                 <td>Endereço</td>
@@ -34,7 +34,7 @@
                             </tr>
                           <?php
                             //1º Passo: Montar o comando SQL que será executado
-                            $sql="SELECT * from fornecedor Order by Nome_Fantasia desc";
+                            $sql="SELECT * from fornecedor Order by nome_fantasia desc";
                             //2º Passo: Preparar o comando para ser executado na conexão de dados
                             $comando= $conexao-> prepare($sql);
                             //3º Passo: Executar o comando
@@ -44,7 +44,7 @@
                             //5º Passo: Pegar todas as linhas de dados que estão em Resultados
                             while($registro = $resultado->fetch_assoc())
                                 {
-                                $cnpj = $registro["cnpj"];
+                               
                                 $nome_fantasia = $registro["nome_fantasia"];
                                 $categoria = $registro["categoria"];
                                 $endereco = $registro["endereco"];
@@ -53,7 +53,7 @@
 
                           ?>
                           <tr> 
-                            <td> <?php echo $cnpj ?> </td>
+                            
                             <td> <?php echo $nome_fantasia ?> </td>
                             <td> <?php echo $categoria?> </td>
                             <td> <?php echo $endereco?> </td>
